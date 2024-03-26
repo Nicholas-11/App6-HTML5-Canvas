@@ -73,6 +73,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var img = document.getElementById("Packer"); // This variable takes the image from the image ID provided in the body of my HTML code and displays it in the canvas.
 		ctx.drawImage(img,.5,.5); // This property makes the image start at the point (.5,.5) on the canvas.
 	}
+	// This function, clearCanvas, takes any of the previous three functions that appear on the canvas and wipes them completely, allowing for the canvas to display another image without overlapping.
+	function clearCanvas() {
+		ctx.clearRect(0, 0, "500", "350") // This property clears the rectangle canvas I created by starting at point (0,0) and traveling 500 pixels to the right and 350 pixels down, which clears the entire area of my canvas.
+	}
 			
 </script>
 
@@ -105,15 +109,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div id="content" class="w3-container">
 		<p> <button onclick="rectangle()"> Click for Rectangle </p> 
-		<!-- I made this button that is titled "Click for Rectangle" that runs the function rectangle which allows for the rectangle to appear in the canvas. -->
+		<!-- I made this button that is titled "Click for Rectangle" that runs the function rectangle which allows for the rectangle to appear in the canvas.-->
 	
 <div id="content" class="w3-container">
 		<p> <button onclick="firstName()"> Click for Name </p>
-		<!-- I made this button that is titled "Click for Name" that runs the function firstName which allows for my name, "Nicholas", to pop up in the canvas with the set formatting. -->
+		<!-- I made this button that is titled "Click for Name" that runs the function firstName which allows for my name, "Nicholas", to pop up in the canvas with the set formatting.-->
 	
 <div id="content" class="w3-container">
 		<p> <button onclick="goPackGo()"> Click for Image </p>
-		<!-- I made this button that is titled "Click for Image" that runs the function goPackGo which allows for the image of the Green Bay Packers logo to appear in the canvas. -->
+		<!-- I made this button that is titled "Click for Image" that runs the function goPackGo which allows for the image of the Green Bay Packers logo to appear in the canvas.-->
+
+<div id="content" class="w3-container">
+		<p> <button onclick="clearCanvas()"> Click to Clear Canvas </p>
+		<!-- I made this button that is titled "Click to Clear Canvas" that runs the function clearCanvas which wipes the canvas of any previous image that was put onto it through the three other functions. This allows for the application of another function onto the canvas without overlapping.-->
 	
 </div>
 	
