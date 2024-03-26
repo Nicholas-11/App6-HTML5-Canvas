@@ -63,6 +63,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		ctx.lineWidth = 1; // This property makes the border width of the rectangle one pixel wide.
 		ctx.strokeRect (x, y, width, height); // This piece of JavaScript contructs the outline of the rectangle given the parameters that were set by the previous constants of x, y, width, and height.
 	}
+	// This function, firstName, presents my first name within the canvas while following parameters like font, size, and location.
+	function firstName() {
+		ctx.font = "100px Arial"; // This property makes my name appear in the font of Arial and with the size of 100px.
+		ctx.fillText("Nicholas",60,195); // This property defines what text is going to be presented in the function firstName, in this case "Nicholas", as well as the place of my name which will start at the point of (60, 195). 
+	}
 	// This function, goPackGo, grabs the image ID that I provided in the body of my code and presents the image in my canvas.
 	function goPackGo() {
 		var img = document.getElementById("Packer"); // This variable takes the image from the image ID provided in the body of my HTML code and displays it in the canvas.
@@ -101,6 +106,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="content" class="w3-container">
 		<p> <button onclick="rectangle()"> Click for Rectangle </p> 
 		<!-- I made this button that is titled "Click for Rectangle" that runs the function rectangle which allows for the rectangle to appear in the canvas. -->
+	
+<div id="content" class="w3-container">
+		<p> <button onclick="firstName()"> Click for Name </p>
+		<!-- I made this button that is titled "Click for Name" that runs the function firstName which allows for my name, "Nicholas", to pop up in the canvas with the set formatting. -->
 	
 <div id="content" class="w3-container">
 		<p> <button onclick="goPackGo()"> Click for Image </p>
