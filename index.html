@@ -50,9 +50,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	const canvas = document.getElementById('myCanvas'); 
 	// This piece of JavaScript assigns the HTML canvas element with the ID 'myCanvas' to the constant variable canvas.
 	const ctx = canvas.getContext('2d');
-	// This piece of JavaScript allows initializes a 2D rendering context for an HTML canvas element.
+	// This piece of JavaScript initializes a 2D rendering context for an HTML canvas element.
 
-	// This function rectangle defines the properties and style of the rectangle presented in the canvas.
+	// This function, rectangle, defines the properties and style of the rectangle presented in the canvas.
 	function rectangle() {
 		const x = 50; // X-coordinate of the top-left corner of the rectangle.
 		const y = 50; // Y-coordinate of the top-left corner of the rectangle.
@@ -63,10 +63,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		ctx.lineWidth = 1; // This property makes the border width of the rectangle one pixel wide.
 		ctx.strokeRect (x, y, width, height); // This piece of JavaScript contructs the outline of the rectangle given the parameters that were set by the previous constants of x, y, width, and height.
 	}
+	// This function, goPackGo, grabs the image ID that I provided in the body of my code and presents the image in my canvas.
+	function goPackGo() {
+		var img = document.getElementById("Packer"); // This variable takes the image from the image ID provided in the body of my HTML code and displays it in the canvas.
+		ctx.drawImage(img,.5,.5); // This property makes the image start at the point (.5,.5) on the canvas.
+	}
 			
 </script>
-
-
 
 <style>	
 .body {
@@ -89,14 +92,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
-	
+
+<img id="Packer"
+	src="https://th.bing.com/th/id/OIP.YORKZNLr7tcEU02S0QCm6AAAAA?"
+	<img src="/img/html/Packer" hidden>
+	<!-- This code is put in place to provide an image of the Green Bay Packers logo that will be placed in the canvas upon pressing the button, "Click for image." I also made sure to hide the intial image so it only appears when the button is pressed and does not permanently stay on the webpage.-->
+
 <div id="content" class="w3-container">
-	
 		<p> <button onclick="rectangle()"> Click for Rectangle </p> 
 		<!-- I made this button that is titled "Click for Rectangle" that runs the function rectangle which allows for the rectangle to appear in the canvas. -->
+	
+<div id="content" class="w3-container">
+		<p> <button onclick="goPackGo()"> Click for Image </p>
+		<!-- I made this button that is titled "Click for Image" that runs the function goPackGo which allows for the image of the Green Bay Packers logo to appear in the canvas. -->
+	
 </div>
 	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code. </p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
